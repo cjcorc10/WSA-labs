@@ -36,7 +36,7 @@ From the results we can determine that both the status code and length will diff
 
 To brute-force for Carlos we only need to change the requested id parameter from wiener to carlos and the prefix on the cookie. 
 
-Our attack is successful and we can know sign in as Carlos (I like to use the show response in browser option with Intruder) :
+Our attack is successful and we can now sign in as Carlos
 
 ![image](https://user-images.githubusercontent.com/79766677/199612534-18a265c1-8b7d-4d2f-a0f7-ec50db9b3c21.png)
 
