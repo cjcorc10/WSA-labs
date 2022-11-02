@@ -16,6 +16,10 @@ After signing in the web server responds with the cookie values
 
 ![image](https://user-images.githubusercontent.com/79766677/199610319-12624968-84c8-4471-b610-88dc9c048f48.png)
 
+If we make a request to fetch our account we can see our cookies include:
+
+![image](https://user-images.githubusercontent.com/79766677/199612225-b8e571c9-c89e-4632-9313-821487795a04.png)
+
 The stay-logged-in cookie is in ascii, so I suspect it could be base64 encoded and after decoding it the username is revealed with what may be the password hashed:
 
 ![image](https://user-images.githubusercontent.com/79766677/199610816-6145af7a-02e1-4c31-bcd7-e5a75d5311e1.png)
@@ -30,4 +34,9 @@ From the results we can determine that both the status code and length will diff
 
 ![image](https://user-images.githubusercontent.com/79766677/199611783-a23d23ff-d194-4c45-b52d-f3e76e855cb6.png)
 
+To brute-force for Carlos we only need to change the requested id parameter from wiener to carlos and the prefix on the cookie. 
+
+Our attack is successful and we can know sign in as Carlos (I like to use the show response in browser option with Intruder) :
+
+![image](https://user-images.githubusercontent.com/79766677/199612534-18a265c1-8b7d-4d2f-a0f7-ec50db9b3c21.png)
 
