@@ -30,12 +30,17 @@ To repeat this process we need to use burp's macros so that we can dynamically r
 Burp macros can be created in Project Options > Macros. We want to capture the following requests made for the macro to work:
 
   POST /cart
+  
       > adds 1 gift card to cart
   POST /cart/coupon
+      
       > applys coupon code for 30% off
   POST /cart/checkout 
+      
       > purchases the gift card
   GET /cart/order-confirmation?oder-confirmed=true
+      
       > confirms order of gift card
   POST /gift-card
+      
       > redeems code to account
