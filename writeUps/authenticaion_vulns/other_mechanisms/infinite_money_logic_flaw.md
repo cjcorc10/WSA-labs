@@ -46,3 +46,21 @@ Burp macros can be created in Project Options > Macros. We want to capture the f
        redeems code to account
 
 ![image](https://user-images.githubusercontent.com/79766677/200419340-10bf38bb-f82d-4e8c-8e2c-c717288943eb.png)
+
+After selecting the requests in the right order we need to make the macro dynamic by capturing the response to the confirmation request. This response holds the gift card redeemable code. We will use this in the last POST request to redeem the code.
+
+To capture this value we use "Configure Item" in the confirmation request and select the generated gift card code.
+
+![image](https://user-images.githubusercontent.com/79766677/200419983-1d29a2f1-08ab-4c4a-b535-51540b22da05.png)
+
+After capturing the gift card code we need to make sure the POST request that redeems the gift card uses the newly purchased gift card value. To do this we use "Configure Item" on the request and select the parameter to be derived from prior request:
+
+![image](https://user-images.githubusercontent.com/79766677/200420249-b68f85ac-cd2c-439e-a1d2-feb056a29035.png)
+
+To run our newly created macro we need to create a Session handling rule for when it is run. We will select our rule action to be our macro and the scope to be ran on all URL's.
+
+![image](https://user-images.githubusercontent.com/79766677/200420486-99cec216-7a80-4f0e-a640-a10255e2bff1.png)
+
+![image](https://user-images.githubusercontent.com/79766677/200420517-3be89765-b70a-477a-b73a-b1353e64e751.png)
+
+Our macro can now be run with all our Burp Tools. All that is left to do is use intruder to issue a request to the site with a NULL payload. It's important to limit the resource pool to 1 thread otherwise we could end up with too many gift cards in our cart and not enough money to purchase them. I've generated 400 payloads and after they are comlplete I should have enough funds to purchase the jacket.
