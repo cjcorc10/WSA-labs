@@ -31,16 +31,18 @@ Burp macros can be created in Project Options > Macros. We want to capture the f
 
   POST /cart
   
-      > adds 1 gift card to cart
+       adds 1 gift card to cart
   POST /cart/coupon
       
-      > applys coupon code for 30% off
+       applys coupon code for 30% off
   POST /cart/checkout 
       
-      > purchases the gift card
+       purchases the gift card
   GET /cart/order-confirmation?oder-confirmed=true
       
-      > confirms order of gift card
+       confirms order of gift card
   POST /gift-card
       
-      > redeems code to account
+       redeems code to account
+
+![image](https://user-images.githubusercontent.com/79766677/200419340-10bf38bb-f82d-4e8c-8e2c-c717288943eb.png)
