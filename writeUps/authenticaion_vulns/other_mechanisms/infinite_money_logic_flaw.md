@@ -63,4 +63,7 @@ To run our newly created macro we need to create a Session handling rule for whe
 
 ![image](https://user-images.githubusercontent.com/79766677/200420517-3be89765-b70a-477a-b73a-b1353e64e751.png)
 
-Our macro can now be run with all our Burp Tools. All that is left to do is use intruder to issue a request to the site with a NULL payload. It's important to limit the resource pool to 1 thread otherwise we could end up with too many gift cards in our cart and not enough money to purchase them. I've generated 400 payloads and after they are comlplete I should have enough funds to purchase the jacket.
+Our macro can now be run with all our Burp Tools. All that is left to do is use intruder to issue a request to the site with a NULL payload. It's important to limit the resource pool to 1 thread otherwise we could end up with too many gift cards in our cart and not enough money to purchase them. I just used a GET /my-account request from ealier and I've generated 400 payloads, so that after they are comlplete I should have enough funds to purchase the jacket.
+
+![image](https://user-images.githubusercontent.com/79766677/200421916-8518bd0c-20f9-4e35-b1a6-3bc1eee5970c.png)
+
