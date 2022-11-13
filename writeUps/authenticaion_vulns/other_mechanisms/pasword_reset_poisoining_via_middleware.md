@@ -8,7 +8,7 @@ I have read about this type of vulnerability here:
 > https://www.skeletonscribe.net/2013/05/practical-http-host-header-attacks.html
 
 
-In this article James Kettle describes explains how some web applications dynamically generate their password reset URL's based on the HOST header in the reset request. If the changing the host header is forbidden then we can try using the X-Forwarded-Host header, which will override the HOST header.
+In this article James Kettle describes how some web applications dynamically generate their password reset URL's based on the HOST header in the reset request. If the changing the host header is forbidden then we can try using the X-Forwarded-Host header, which will override the HOST header.
 
 
 I am going to run through the process of resetting a password for wiener to observe the behaviour of the server during a standard password reset.
